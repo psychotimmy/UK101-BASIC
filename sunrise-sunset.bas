@@ -137,12 +137,13 @@
 1290 F=F+1: J=J-1
 1300 RETURN
 1310 REM
-1320 PRINT"This program by Roger W. Sinnott"
-1325 PRINT"calculates the times of sunrise"
-1330 PRINT"and sunset on any date, accurate"
-1335 PRINT"to the minute within several"
-1340 PRINT"centuries of the present."
-1342 PRINT
+1320 REM This program by Roger W. Sinnott
+1325 REM calculates the times of sunrise
+1330 REM and sunset on any date, accurate
+1335 REM to the minute within several
+1340 REM centuries of the present.
+1342 PRINT "Sunrise and sunset calculator"
+1343 PRINT
 1345 REM It correctly describes what happens
 1350 REM in the arctic and antarctic regions,
 1355 REM where the Sun may not rise or set on
