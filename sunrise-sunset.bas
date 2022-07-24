@@ -142,18 +142,17 @@
 1330 REM and sunset on any date, accurate
 1335 REM to the minute within several
 1340 REM centuries of the present.
-1342 PRINT "Sunrise and sunset calculator"
-1343 PRINT
 1345 REM It correctly describes what happens
 1350 REM in the arctic and antarctic regions,
 1355 REM where the Sun may not rise or set on
 1360 REM a given date.
-1365 PRINT"Enter north latitudes positive,"
-1366 PRINT"west longitudes negative."
-1370 PRINT"For the time zone, enter the number"
-1375 PRINT"of hours west of Greenwich."
-1380 PRINT"(e.g. 0 for GMT, -1 for BST)."
-1382 PRINT
-1385 REM The calculation is discussed in
-1390 REM Sky and Telescope, August 1994 pg. 84
-1400 RETURN
+1365 REM The calculation is discussed in
+1370 REM Sky and Telescope, August 1994 pg. 84
+1375 REM
+1380 PRINT "Sunrise & Sunset Calculator"
+1385 PRINT
+1390 PRINT"Enter North & East as positive numbers"
+1395 PRINT"Time zone = hours west of Greenwich"
+1400 PRINT"(e.g. 0 for GMT, -1 for BST)"
+1405 PRINT
+1410 RETURN
