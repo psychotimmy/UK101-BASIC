@@ -1,4 +1,11 @@
-10 REM        Sunrise-Sunset
+10 REM Sunrise-Sunset for UK101
+11 REM Modifications by Tim Holyoake, 
+12 REM 24th July 2022
+13 REM Use 16 lines in CEGMON
+14 POKE 547,12
+15 REM Print usage instructions
+16 GOSUB 1310
+17 REM Start original program
 20 GOSUB 300
 30 INPUT "Lat, Long (deg)";B5,L5
 40 INPUT "Time zone (hrs)";H
@@ -55,7 +62,7 @@
 550 IF C0>0 THEN 570
 560 V0=S*SIN(D0)+C*COS(D0)*COS(H0)-Z
 570 V2=S*SIN(D2)+C*COS(D2)*COS(H2)-Z
-580 IF SGN(V0)=SGN(V2) THEN 800 
+580 IF SGN(V0)=SGN(V2) THEN 800
 590 V1=S*SIN(D1)+C*COS(D1)*COS(H1)-Z
 600 A=2*V2-4*V1+2*V0: B=4*V1-3*V0-V2
 610 D=B*B-4*A*V0: IF D<0 THEN 800
@@ -130,19 +137,22 @@
 1290 F=F+1: J=J-1
 1300 RETURN
 1310 REM
-1320 REM This program by Roger W. Sinnott 
-1325 REM calculates the times of sunrise
-1330 REM and sunset on any date, 
-1335 REM accurate to the minute within several
-1340 REM centuries of the present. 
-1345 REM It correctly describes what happens in the 
-1350 REM arctic and antarctic regions, 
+1320 PRINT"This program by Roger W. Sinnott"
+1325 PRINT"calculates the times of sunrise"
+1330 PRINT"and sunset on any date, accurate"
+1335 PRINT"to the minute within several"
+1340 PRINT"centuries of the present."
+1342 PRINT
+1345 REM It correctly describes what happens
+1350 REM in the arctic and antarctic regions,
 1355 REM where the Sun may not rise or set on
-1360 REM a given date.  
-1365 REM Enter north latitudes positive, 
-1366 REM west longitudes negative.
-1370 REM For the time zone, enter the number of 
-1375 REM west of Greenwich.
-1380 REM (e.g. 0 for GMT, -1 for BST).
-1385 REM The calculation is discussed
-1390 REM in Sky & Telescope August 1994, page 84.                                    
+1360 REM a given date.
+1365 PRINT"Enter north latitudes positive,"
+1366 PRINT"west longitudes negative."
+1370 PRINT"For the time zone, enter the number"
+1375 PRINT"of hours west of Greenwich."
+1380 PRINT"(e.g. 0 for GMT, -1 for BST)."
+1382 PRINT
+1385 REM The calculation is discussed in
+1390 REM Sky and Telescope, August 1994 pg. 84
+1400 RETURN
