@@ -19,10 +19,10 @@
 60 A=Y
 70 GOSUB 500
 100 PRINT:PRINT "Your bet";:INPUT B
-110 IF B<=T GOTO 120
+110 IF B<=T GOTO 115
 112 PRINT "You don't have that much"
 113 GOTO 100
-115 PRINT"Your cards:";
+115 PRINT "Your cards:";
 120 Z=INT(13*RND(99)+2)
 121 IF Z>14 THEN GOTO 120
 130 A=Z
@@ -30,11 +30,11 @@
 150 PRINT
 160 IF Z<=Y GOTO 200
 170 IF Z>=X GOTO 200
-180 PRINT "You win!"
+180 PRINT "Dealer only had ";Y; "so you win!"
 181 PRINT:PRINT
 190 T=B+T
 195 GOTO 300
-200 PRINT "You lose :("
+200 PRINT "Dealer had ";Y;" so you lose :("
 201 PRINT:PRINT
 210 T=T-B
 220 IF T<=0 GOTO 380
