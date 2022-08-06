@@ -21,7 +21,7 @@
 319 REM N keeps track of how much space is used in array P
 320 N = 1 : X = 19
 327 REM *** First few primes are often divisors - sieve
-328 REM *** then here - ugly code but faster than using
+328 REM *** them here - ugly code but faster than using
 329 REM *** SQR function and FOR loop if not needed
 330 IF X = 3*INT(X/3) THEN PRINT ".."; : GOTO 480
 335 IF X = 5*INT(X/5) THEN PRINT ".."; : GOTO 480
