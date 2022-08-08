@@ -13,4 +13,6 @@ Remove BASIC line 14 if not running CEGMON.
 
 4. Acey-Ducey (Acey- Deucy).bas - Bizarre card game, probably bug-ridden, taken directly from the Compukit UK101 Manual - program 7.
 
-5. Minefield.bas Minesweeper type game (needs MONUK02 ROM installed). Recovered from an internet forum - originally published in a magazine. Author unknown.
+5. Minefield.bas Minesweeper type game (needs original monitor MONUK02 ROM installed). Recovered from an internet forum - originally published in a magazine. Author unknown.
+
+6. Visible.bas Fill the visible display RAM with 16 rows of 48 characters A-P. (Original monitor)
