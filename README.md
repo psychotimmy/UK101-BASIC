@@ -19,3 +19,6 @@ Remove BASIC line 14 if not running CEGMON.
 
 7. Hundred.bas - The 100 door problem. Work out which doors will be open after inverting their status (i.e. closed/open) after 100 passes, where on the
                  first pass all doors are visited, then every second door, then every third door and so on. (Original monitor)
+
+8. Lepassetemps.bas - Le passe temps (Connect 4 type game). Original monitor (change BASIC line 20 to use CEGMON). Written by A. Knight and published
+                      in Practical Electronics magazine, July 1980.
