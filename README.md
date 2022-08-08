@@ -15,4 +15,7 @@ Remove BASIC line 14 if not running CEGMON.
 
 5. Minefield.bas Minesweeper type game (needs original monitor MONUK02 ROM installed). Recovered from an internet forum - originally published in a magazine. Author unknown.
 
-6. Visible.bas Fill the visible display RAM with 16 rows of 48 characters A-P. (Original monitor)
+6. Visible.bas - Fill the visible display RAM with 16 rows of 48 characters A-P. (Original monitor)
+
+7. Hundred.bas - The 100 door problem. Work out which doors will be open after inverting their status (i.e. closed/open) after 100 passes, where on the
+                 first pass all doors are visited, then every second door, then every third door and so on. (Original monitor)
