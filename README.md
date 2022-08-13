@@ -22,3 +22,6 @@ Remove BASIC line 14 if not running CEGMON.
 
 8. Lepassetemps.bas - Le passe temps (Connect 4 type game). Original monitor (change BASIC line 20 to use CEGMON). Written by A. Knight and published
                       in Practical Electronics magazine, July 1980.
+
+9. Life.bas - An implementation of John Conway's Life game. Requires CEGMON and a 2K VDU RAM space (64x32).
+
