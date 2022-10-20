@@ -27,3 +27,4 @@ Remove BASIC line 14 if not running CEGMON.
 
 10. TheValley-Version1.bas - An implementation of The Valley. No variations. Requires CEGMON and a 2K VDU RAM space (64×32).
 
+11. TheValley-Version2.bas - An implementation of The Valley. Most variations. Requires CEGMON and a 2K VDU RAM space (64×32).
