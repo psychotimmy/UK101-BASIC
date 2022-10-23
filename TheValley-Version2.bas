@@ -37,8 +37,6 @@
 67 SP=32 : REM ** Blank/space code for all scenarios
 80 REM ** UK101 CEGMON specific code
 82 GOSUB 56000: REM Non-halting get initialisation
-90 REM ** Opening titles
-92 GOSUB 56110
 99 REM ** Define major variables
 100 DIM D(3),G(73),P(8),N(8),A(4),T(2),MA(18),WI(1,4)
 110 DIM M$(18),MS(18),N1(18),RT$(28):REM ** RT$ used for ratings
@@ -61,6 +59,12 @@
 350 READ WI(I,J)
 360 NEXT J
 370 NEXT I
+377 REM ** Line 380 required for Tim Baldwin's 1.4.0 emulator as 
+378 REM ** CEGMON32 ROM supplied seems to ignore screen.offset=0
+379 REM ** property.
+380 FOR I=0TO4:POKE546+I,WI(0,I):NEXT:PRINTCH$;D$:REM ** Full scr
+389 REM ** Opening titles
+390 GOSUB 56110
 999 REM ** Character choice and load
 1000 PRINTLF$;"Load a character from tape (Y/N) ?"
 1010 VG$="YN":GOSUB 1500:REM ** Uniget
@@ -712,7 +716,7 @@
 57010 IF UE=1 THEN UE=0
 57018 REM ** UE=0 so not called until next monster OR if scene
 57019 REM ** changes and at least one monster defeated (UB>0)
-57020 PRINT " ";J$;"'s progress":PRINT
+57020 PRINT CH$;" ";J$;"'s progress":PRINT
 57030 IF UR=0 THEN PRINT " No cowardly retreats"
 57040 IF UR=1 THEN PRINT UR;" cowardly retreat"
 57050 IF UR>1 THEN PRINT UR;" cowardly retreats"
