@@ -356,7 +356,7 @@
 5080 EX=INT(EX+U/2):CF=0:SC=1:RETURN
 5090 PRINT "but recovers with a snarl !"
 5100 SC=2:RETURN
-5199 ** Spell 2 - Psi lance
+5199 REM ** Spell 2 - Psi lance
 5200 IF MS>C OR PS<49 OR EX<1000 THEN SC=4:RETURN
 5210 C=C-10:IF C<=0 THEN SC=5:RETURN
 5220 IFN=0THENPRINTD$;"This beast has no psi to attack":SC=2:RETURN
