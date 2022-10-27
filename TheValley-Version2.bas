@@ -35,6 +35,11 @@
 65 YD=128: REM ** Castle doorway
 66 YF=4  : REM ** Castle treasures
 67 SP=32 : REM ** Blank/space code for all scenarios
+68 REM ** Convert frequently used codes to characters
+69 YW$=CHR$(YW) : REM ** Castle border and walls
+70 WL$=CHR$(WL) : REM ** Woods / Swamps lake
+71 REM ** Default string for allowable Uniget inputs
+72 VK$="0123456789EUIOJKL"
 80 REM ** UK101 CEGMON specific code
 82 GOSUB 56000: REM Non-halting get initialisation
 99 REM ** Define major variables
@@ -68,7 +73,7 @@
 999 REM ** Character choice and load
 1000 PRINTLF$;"Load a character from tape (Y/N) ?"
 1010 VG$="YN":GOSUB 1500:REM ** Uniget
-1011 VG$="0123456789EUIOJKL": REM ** Reset kbd input
+1011 VG$=VK$: REM ** Reset kbd input
 1015 IF GC$="Y" THEN 1060:REM ** Don't allow name change!
 1020 PRINT LF$;:INPUT "Character's name   ";J$
 1030 IF J$="" THEN 1020
@@ -356,7 +361,7 @@
 5080 EX=INT(EX+U/2):CF=0:SC=1:RETURN
 5090 PRINT "but recovers with a snarl !"
 5100 SC=2:RETURN
-5199 REM ** Spell 2 - Psi lance
+5199 ** Spell 2 - Psi lance
 5200 IF MS>C OR PS<49 OR EX<1000 THEN SC=4:RETURN
 5210 C=C-10:IF C<=0 THEN SC=5:RETURN
 5220 IFN=0THENPRINTD$;"This beast has no psi to attack":SC=2:RETURN
@@ -469,17 +474,17 @@
 12060 UY=INT(RND(1)*SL)+1:UX=INT(RND(1)*SV)+1:POKE(TL+(UY*SW)+UX),PC
 12070 NEXT I
 12079 REM ** Print in lake
-12080 PRINTCH$;D2$;R2$;CR$;CR$;CHR$(WL);CHR$(WL)
+12080 PRINTCH$;D2$;R2$;CR$;CR$;WL$;WL$
 12090 PRINTR2$;CR$;
-12091 FORI=1TO4:PRINTCHR$(WL);:NEXTI:PRINTCHR$(WL)
-12100 PRINTR2$;CHR$(WL);CHR$(WL);"  ";CHR$(WL);CHR$(WL)
-12110 PRINTR2$;CHR$(WL);CHR$(WL);CHR$(WC);" ";
-12111 PRINTCHR$(WL);CHR$(WL);CHR$(WL)
+12091 FORI=1TO4:PRINTWL$;:NEXTI:PRINTWL$
+12100 PRINTR2$;WL$;WL$;"  ";WL$;WL$
+12110 PRINTR2$;WL$;WL$;CHR$(WC);" ";
+12111 PRINTWL$;WL$;WL$
 12120 PRINTR2$;CR$;
-12121 FORI=1TO4:PRINTCHR$(WL);:NEXTI
-12122 PRINTCR$;CHR$(WL);CHR$(WL)
-12130 PRINTR2$;CR$;CR$;CR$;CHR$(WL);CHR$(WL)
-12140 PRINTR2$;CR$;CR$;CR$;CR$;CHR$(WL)
+12121 FORI=1TO4:PRINTWL$;:NEXTI
+12122 PRINTCR$;WL$;WL$
+12130 PRINTR2$;CR$;CR$;CR$;WL$;WL$
+12140 PRINTR2$;CR$;CR$;CR$;CR$;WL$
 12141 PRINTD$ : REM ** Position cursor out of frame
 12149 REM ** Draw in the frame
 12150 FOR I=0TOSV:POKE TL+I,WB:NEXT I
@@ -494,13 +499,13 @@
 14010 F$="CBE":P=0:H=N(FL):PK=SP:P(FL)=P(2)
 14019 REM ** Draw frame
 14020 PRINT CS$;CR$;CR$;
-14021 FOR I=1TOST:PRINTCHR$(YW);:NEXTI:PRINT CHR$(YW)
+14021 FOR I=1TOST:PRINTYW$;:NEXTI:PRINTYW$
 14030 FOR I=1TOSL
-14040 PRINT CR$;CR$;CHR$(YW);
-14041 PRINT "                   ";CHR$(YW)
+14040 PRINT CR$;CR$;YW$;
+14041 PRINT "                   ";YW$
 14050 NEXT I
 14060 PRINTCR$;CR$;
-14061 FOR I=1TOST:PRINTCHR$(YW);:NEXTI:PRINT CHR$(YW)
+14061 FOR I=1TOST:PRINTYW$;:NEXTI:PRINTYW$
 14069 REM ** Draw vertical walls
 14070 RESTORE:FOR I=1 TO P(FL)
 14080 READ V:IF V=100 THEN RESTORE
@@ -569,7 +574,7 @@
 14999 REM ** Stairs subroutine
 15000 POKE W,VC:POKE M,SP
 15010 PRINTD$;"A stairway...up or down?":TV=FL
-15020 VG$="UD":GOSUB 1500:VG$="0123456789EUIOJKL"
+15020 VG$="UD":GOSUB 1500:VG$=VK$
 15030 IF GC$="U" THEN FL=FL+1:GOTO 15050
 15040 FL=FL-1
 15050 IF FL>7 OR FL<2 THEN 15080
@@ -630,7 +635,7 @@
 48080 C=150:PRINTD$;"Thy wounds healed...thy sword sharp"
 48090 PRINT "Go as the Gods demand...trust no other"
 48100 DF=120:GOSUB 36000
-48110 VG$="0123456789EUIOJKL":GOTO 2010:REM ** Movement
+48110 VG$=VK$:GOTO 2010:REM ** Movement
 48999 REM ** Proper ending variation
 49000 PRINTCS$;LF$;
 49010 PRINT"I, the Wizard of Alarian, pay tribute to";LF$
