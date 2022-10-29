@@ -32,3 +32,5 @@ Remove BASIC line 14 if not running CEGMON.
 12. TheValley-Version3.bas - An implementation of The Valley. Limited variations. Requires patched CEGMON, 16K RAM and a 2K VDU RAM space (64×32).
 
 13. TheValley-Version4.bas - An implementation of The Valley. Limited variations, identical to version 3. Requires standard CEGMON, 16K RAM, standard 1K VDU RAM space (48×16).
+
+14. TheValley-Version5.bas - An implementation of The Valley. Limited variations, identical to version 3. Requires original monitor (MONUK02), 16K RAM, standard 1K VDU RAM space (48×16).
