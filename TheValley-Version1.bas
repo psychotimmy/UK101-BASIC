@@ -2,7 +2,7 @@
 80 TL=53248 :REM Top left corner screen memory location
 81 GOSUB 56000: REM Non-halting get initialisation
 99 REM ** Define major variables
-100 DIM D(3),G(73),P(8),N(8),A(4),T(2)
+100 DIM D(3),G(73),P(8),N(8),S(4),T(2)
 110 DIM M$(18),MS(18),N1(18)
 120 VG$="":GC$="":F$="":DL$=""
 130 TS=0:TN=0:TM=4:CF=0: REM ** TM affects delay in 36000
