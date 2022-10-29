@@ -43,7 +43,7 @@
 80 REM ** UK101 CEGMON specific code
 82 GOSUB 56000: REM Non-halting get initialisation
 99 REM ** Define major variables
-100 DIM D(3),G(73),P(8),N(8),A(4),T(2),MA(18),WI(1,4)
+100 DIM D(3),G(73),P(8),N(8),S(4),T(2),MA(18),WI(1,4)
 110 DIM M$(18),MS(18),N1(18),RT$(28):REM ** RT$ used for ratings
 120 DL$="":TS=0:TN=0:TM=4:CF=0: REM ** TM affects delay in 36000
 130 REM ** Set up status area positioning strings
