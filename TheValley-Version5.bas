@@ -100,7 +100,7 @@
 2860 PRINTD$;"A precious stone !           ":GOTO2930
 2870 PRINTD$;"You find the Helm of Evanna !":GOTO2930
 2880 PRINTD$;"The amulet of Alarian...empty...":GOTO2930
-2890 PRINTD$;"An amulet stone...           ":LF$
+2890 PRINTD$;"An amulet stone...           ";LF$
 2900 DF=60:DL$="D":GOSUB36
 2910 IFRN>0.85THENPRINT"...but the wrong one !       ":GOTO2940
 2920 PRINT"...the stone fits !         ":T(1)=T(1)+1
