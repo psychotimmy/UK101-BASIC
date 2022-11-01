@@ -34,3 +34,5 @@ Remove BASIC line 14 if not running CEGMON.
 13. TheValley-Version4.bas - An implementation of The Valley. Limited variations, identical to version 3. Requires standard CEGMON, 16K RAM, standard 1K VDU RAM space (48×16).
 
 14. TheValley-Version5.bas - An implementation of The Valley. Limited variations, identical to version 3. Requires original monitor (MONUK02), 16K RAM, standard 1K VDU RAM space (48×16).
+
+15. TheValley-Version6b.bas - An implementation of The Valley. Abbreviated. Requires original monitor (MONUK02), 8K RAM, standard 1K VDU RAM space (48x16). **Important** - the preloader for this version, TheValley-Version6a.bas, must be run first as it initialises the USR for getting keyboard input, along with the monster strengths for the game.
