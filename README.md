@@ -2,7 +2,7 @@
 
 Repository with BASIC programs that work on the Compukit UK101. Original sources acknowledged where known.
 
-They've (mostly) been tested using an implementation of <a href="http://searle.x10host.com/uk101FPGA/index.html">Grant Searle's FPGA UK101</a> using the CEGMON monitor and 40K RAM expansion.
+They've (mostly) been tested using an implementation of <a href="http://searle.x10host.com/uk101FPGA/index.html">Grant Searle's FPGA UK101</a> using the CEGMON monitor and 40K RAM expansion. There's also <a href=https://uk101.sourceforge.net/">Tim Baldwin's Java based UK101 simulator</a> if you don't fancy messing around with hardware.
 
 1. Primes.bas - Program 6 from the UK101 Manual. Simple prime number generator.
 
