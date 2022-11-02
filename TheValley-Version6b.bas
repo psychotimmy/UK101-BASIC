@@ -1,4 +1,4 @@
-1 REM ** The Valley, Tim Holyoake, Octber 2022, 8K Compukit UK101
+1 REM ** The Valley, Tim Holyoake, October 2022, 8K Compukit UK101
 2 DATAOrc,Imp,Demon,Roc,Ogre,Centaur,Wumpus,Cusith,Dragon,Wraith,Balrog
 3 DIMM$(10):FORI=0TO10:READM$(I):NEXT:K$="0123456789E":V$=K$
 4 E$=CHR$(10):B$=CHR$(9):N$=CHR$(13):J=53261:W$=CHR$(161)
